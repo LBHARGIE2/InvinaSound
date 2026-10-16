@@ -1,0 +1,633 @@
+
+/*
+Theme Name: InvinaSound
+Author: Levi Bhargava
+Version: 1.0.0
+Text Domain: invinasound
+*/
+
+/* =========================
+   1. GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    transition: color 0.3s ease,
+                background-color 0.3s ease;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+/* =========================
+   2. HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #05080c;
+}
+
+.header .logo {
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: #e77000;
+}
+
+.header nav {
+    display: flex;
+    gap: 30px;
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 80vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.9)
+        ),
+        url("images/hero.jpg") center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #fb902c;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    max-width: 550px;
+}
+
+
+/* =========================
+   4. BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #fb902c;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e77000;
+    color: #ffffff;
+}
+
+.btn:focus-visible,
+.header nav a:focus-visible {
+    outline: 2px solid #1effff;
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   5. SERVICES SECTION
+========================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    padding: 80px 60px;
+    background: #0b0f14;
+}
+
+.service-box {
+    min-width: 0;
+    background: #05080c;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #0d1b2a;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    border-color: #fb902c;
+}
+
+.service-box h3 {
+    color: #fb902c;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about {
+    padding: 80px 60px;
+    background: #05080c;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   7. CONTACT HERO
+========================= */
+
+.contact-hero {
+    padding: 80px 60px;
+    background: linear-gradient(
+        90deg,
+        #05080c,
+        #0b1c2d
+    );
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   8. CONTACT SECTION
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: #fb902c;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.contact-info a {
+    color: #fb902c;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #1effff;
+}
+
+
+/* =========================
+   9. CONTACT FORM
+========================= */
+
+.contact-form {
+    min-width: 0;
+    background: #05080c;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #0d1b2a;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #0b0f14;
+    border: 1px solid #0d1b2a;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #fb902c;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form button,
+.contact-form input[type="submit"] {
+    width: auto;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: #fb902c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form input[type="submit"]:hover {
+    background: #e77000;
+}
+
+
+/* =========================
+   10. SUCCESS MESSAGE
+========================= */
+
+.success {
+    background: #b55a05;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   11. FOOTER
+========================= */
+
+.footer {
+    background: #05080c;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #0d1b2a;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.footer a {
+    color: #fb902c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #1effff;
+}
+
+
+/* =========================
+   12. TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+        gap: 20px;
+    }
+
+    .header nav {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 60px 30px;
+    }
+
+    .services {
+        padding: 60px 30px;
+        gap: 20px;
+    }
+
+    .about {
+        padding: 60px 30px;
+    }
+
+    .contact-hero {
+        padding: 60px 30px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 30px;
+    }
+}
+
+
+/* =========================
+   13. MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .ilogo img {
+        height: 50px;
+    }
+
+    .header nav {
+        width: 100%;
+        gap: 12px 20px;
+    }
+
+    .header nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 60px 20px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+        gap: 20px;
+    }
+
+    .service-box {
+        padding: 25px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .contact-hero {
+        padding: 50px 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 32px;
+    }
+
+    .contact {
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+}
+
+
+/* =========================
+   14. SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .header nav {
+        gap: 10px 14px;
+    }
+
+    .contact-form {
+        padding: 20px 15px;
+    }
+}
+
+
+/* =========================
+   15. REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+.header .logo {
+    color: #ffffff !important;
+}
+
+
+/* Header layout */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    background: #05080c;
+    border-bottom: 1px solid #0d1b2a;
+    gap: 30px;
+}
+
+/* White soundwave logo */
+.ilogo img {
+    display: block;
+    height: 50px;
+    width: auto;
+}
+
+/* Text logo link */
+.header .logo {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .logo a,
+.header .logo a:visited,
+.header .logo a:hover,
+.header .logo a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Make "Sound" orange */
+.header .logo span {
+    color: #e77000;
+}
+
+/* Navigation */
+.header .navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .navigation a,
+.header .navigation a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header .navigation a:hover {
+    color: #1effff;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .header .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: #ffffff;
+    }
+}
+
+
+
+/* Navigation links */
+header.header .navigation a,
+header.header .navigation a:link,
+header.header .navigation a:visited,
+header.header .navigation a:active,
+header.header .navigation a:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+header.header .navigation a:hover {
+    color: #1effff !important;
+    text-decoration: none !important;
+}
+
+
+
+/* InvinaSound navigation */
+.header nav a,
+.header nav a:link,
+.header nav a:visited,
+.header nav a:active {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.header nav a:hover {
+    background-color: transparent !important;
+    color: #1effff !important;
+    text-decoration: none !important;
+}
