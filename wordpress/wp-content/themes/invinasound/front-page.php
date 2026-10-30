@@ -9,7 +9,7 @@
             Betrouwbare audio-oplossingen voor al uw soorten events.
         </p>
 
-        <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+        <a href="<?php echo esc_url(home_url('/index.php/contact/')); ?>"
            class="btn">
             Neem contact op
         </a>

@@ -1,5 +1,14 @@
 
 <?php
+
+/**
+ * Template Name: invinaSound Contact
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 $success = false;
 $error = false;
 
@@ -18,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["invina_contact_submit
         is_email($email) &&
         $bericht !== ""
     ) {
-        $ontvanger = "Invinasound@gmail.com";
+        $ontvanger = "250314@student.glu.nl";  //Invinasound@gmail.com
         $onderwerp = "Nieuw bericht via website";
 
         $headers = array(
